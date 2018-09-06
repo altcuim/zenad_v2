@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/zenad_bg.qm</file>
+        <file alias="de">locale/zenad_de.qm</file>
+        <file alias="en">locale/zenad_en.qm</file>
+        <file alias="es">locale/zenad_es.qm</file>
+        <file alias="fi">locale/zenad_fi.qm</file>
+        <file alias="fr">locale/zenad_fr.qm</file>
+        <file alias="it">locale/zenad_it.qm</file>
+        <file alias="ja">locale/zenad_ja.qm</file>
+        <file alias="pl">locale/zenad_pl.qm</file>
+        <file alias="pt">locale/zenad_pt.qm</file>
+        <file alias="ru">locale/zenad_ru.qm</file>
+        <file alias="sk">locale/zenad_sk.qm</file>
+        <file alias="sv">locale/zenad_sv.qm</file>
+        <file alias="vi">locale/zenad_vi.qm</file>
+        <file alias="zh_CN">locale/zenad_zh_CN.qm</file>
+        <file alias="zh_TW">locale/zenad_zh_TW.qm</file>
+    </qresource>
+</RCC>

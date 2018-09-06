@@ -1,0 +1,26 @@
+# /etc/conf.d/zenadd: config file for /etc/init.d/zenadd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/zenad/zenad.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/zenadd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/zenadd.pid"
+
+# Where to write zenadd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/zenadd"
+
+# User and group to own zenadd process
+#BITCOIND_USER="zenad"
+#BITCOIND_GROUP="zenad"
+
+# Path to zenadd executable
+#BITCOIND_BIN="/usr/bin/zenadd"
+
+# Nice value to run zenadd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
