@@ -1,20 +1,20 @@
-Name "Zenad Core (-bit)"
+Name "Zenad Core (64-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 2.0.0
+!define VERSION 1.0.1
 !define COMPANY "Zenad Core project"
 !define URL http://bit.zenads/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/root/ZND/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/root/ZND/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/linux/Zenad/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/linux/Zenad/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/root/ZND/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/linux/Zenad/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,13 +22,13 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "Zenad Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\zenad-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/root/ZND/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/linux/Zenad/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "" == "64"
+!if "64" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /root/ZND/zenad-${VERSION}-win-setup.exe
-!if "" == "64"
+OutFile /home/linux/Zenad/zenad-${VERSION}-win64-setup.exe
+!if "64" == "64"
 InstallDir $PROGRAMFILES64\ZND
 !else
 InstallDir $PROGRAMFILES\ZND
@@ -58,7 +58,7 @@ CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion ${VERSION}.3
+VIProductVersion ${VERSION}.1
 VIAddVersionKey ProductName "Zenad Core"
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /root/ZND/release/zenad-qt.exe
-    File /oname=COPYING.txt /root/ZND/COPYING
-    File /oname=readme.txt /root/ZND/doc/README_windows.txt
+    File /home/linux/Zenad/release/zenad-qt.exe
+    File /oname=COPYING.txt /home/linux/Zenad/COPYING
+    File /oname=readme.txt /home/linux/Zenad/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /root/ZND/release/zenadd.exe
-    File /root/ZND/release/zenad-cli.exe
+    File /home/linux/Zenad/release/zenadd.exe
+    File /home/linux/Zenad/release/zenad-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /root/ZND/doc\*.*
+    File /r /home/linux/Zenad/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
@@ -160,7 +160,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "" == "64"
+!if "64" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64
