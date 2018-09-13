@@ -113,7 +113,7 @@ public:
         nMasternodeCountDrift = 20;
 	nMasternodeColleteralLimxDev = 4000; //Params().MasternodeColleteralLimxDev()
         nModifierUpdateBlock = 1; // we use the version 2 for dmd
-        nMaxMoneyOut = 18422481 * COIN;
+        nMaxMoneyOut = 43699754.75 * COIN;
 
         const char* pszTimestamp = "Zenad cryptocurrency";
         CMutableTransaction txNew;
