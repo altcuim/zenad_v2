@@ -137,8 +137,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x56a0d1d9c05801204001839ade9e5ec3358a35c85a89de5fcf1fc4a42b3c7a96"));
         
 
-        vSeeds.push_back(CDNSSeedData("seed1.zenad.group", "95.179.134.122"));
-        vSeeds.push_back(CDNSSeedData("seed2.zenad.group", "212.237.25.217"));
+        vSeeds.push_back(CDNSSeedData("seed1.zenad.group", "81.2.237.124"));
+        vSeeds.push_back(CDNSSeedData("explorer2", "176.223.130.122"));
         //vFixedSeeds.clear();
         //vSeeds.clear();
 
